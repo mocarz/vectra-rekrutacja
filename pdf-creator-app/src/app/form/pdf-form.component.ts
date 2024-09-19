@@ -4,11 +4,11 @@ import { PdfRequestDto } from '../interfaces/PdfRequestDto';
 
 
 @Component({
-  selector: 'app-form-component',
-  templateUrl: './form-component.component.html',
-  styleUrls: ['./form-component.component.css']
+  selector: 'app-pdf-form',
+  templateUrl: './pdf-form.component.html',
+  styleUrls: ['./pdf-form.component.css']
 })
-export class FormComponentComponent implements OnInit {
+export class PdfFormComponent implements OnInit {
 
   constructor() { }
 
