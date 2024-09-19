@@ -1,6 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PdfRequestDto } from '../interfaces/PdfRequestDto';
+import { identityNumberValidator } from '../shared/form-validators/identity-number-validator';
+import { capitalFirstCharacter } from '../shared/form-validators/capital-first-character';
 
 
 @Component({
@@ -14,15 +16,16 @@ export class PdfFormComponent implements OnInit {
 
   @Output() onSubmitForm = new EventEmitter<PdfRequestDto>();
 
-  pdfRequestForm = new FormGroup({
-    title: new FormControl(''),
-    name: new FormControl(''),
-    surname: new FormControl(''),
-    identityNumber: new FormControl(''),
-    templateName: new FormControl(''),
-  });
+  pdfRequestForm: FormGroup
 
   ngOnInit(): void {
+    this.pdfRequestForm = new FormGroup({
+      title: new FormControl('', [Validators.required]),
+      name: new FormControl('Michał', [capitalFirstCharacter()]),
+      surname: new FormControl('Mocarski', [capitalFirstCharacter()]),
+      identityNumber: new FormControl('87040613010', [identityNumberValidator()]),
+      templateName: new FormControl('my-template', [Validators.required]),
+    });
   }
 
   onSubmit(form: FormGroup) {

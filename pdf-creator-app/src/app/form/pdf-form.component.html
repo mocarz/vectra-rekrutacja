@@ -1,38 +1,41 @@
 <h1>Enter your data</h1>
 <form [formGroup]="pdfRequestForm" (ngSubmit)="onSubmit(pdfRequestForm)">
     <div>
-        <mat-form-field>
+        <mat-form-field class="form-field">
             <mat-label>Title</mat-label>
-            <mat-select>
-                <mat-option>Pan</mat-option>
-                <mat-option>Pani</mat-option>
+            <mat-select formControlName="title">
+                <mat-option [value]="'Pan'">Pan</mat-option>
+                <mat-option [value]="'Pani'">Pani</mat-option>
             </mat-select>
+            <mat-error>Must choose a title</mat-error>
         </mat-form-field>
     </div>
     <div>
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="form-field">
             <mat-label>Name</mat-label>
             <input formControlName="name" matInput placeholder="Name">
+            <mat-error>Name must start with a capital letter</mat-error>
         </mat-form-field>
     </div>
     <div>
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="form-field">
             <mat-label>Surame</mat-label>
             <input formControlName="surname" matInput placeholder="Surname">
+            <mat-error>Surname must start with a capital letter</mat-error>
         </mat-form-field>
     </div>
     <div>
-        <!-- Identity number:
-        <input formControlName="identityNumber" placeholder="Identity number"> -->
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="form-field">
             <mat-label>Identity number:</mat-label>
             <input formControlName="identityNumber" matInput placeholder="Identity number">
+            <mat-error>Please enter a valid identity number</mat-error>
         </mat-form-field>
     </div>
     <div>
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="form-field">
             <mat-label>Template name</mat-label>
             <input formControlName="templateName" matInput placeholder="Template name">
+            <mat-error>Must provide a template name</mat-error>
         </mat-form-field>
     </div>
 
