@@ -1,0 +1,28 @@
+<h1>Enter your data</h1>
+<form [formGroup]="pdfRequestForm" (ngSubmit)="onSubmit(pdfRequestForm)">
+    <div>
+        Title:
+        <select id="title" formControlName="title">
+            <option>Pan</option>
+            <option>Pani</option>
+        </select>
+    </div>
+    <div>
+        Name:
+        <input formControlName="name" placeholder="Name">
+    </div>
+    <div>
+        Surname:
+        <input formControlName="surname" placeholder="Surname">
+    </div>
+    <div>
+        Identity number:
+        <input formControlName="identityNumber" placeholder="Identity number">
+    </div>
+    <div>
+        Template name:
+        <input formControlName="templateName" placeholder="Template name">
+    </div>
+
+    <button type="submit" [disabled]="!pdfRequestForm.valid">Next</button>
+</form>

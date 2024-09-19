@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { PdfRequestDto } from './interfaces/PdfRequestDto';
+
+enum Page {
+  Form = "Form",
+  FormConfirmation = "FormConfirmation",
+}
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pdf-creator-app';
+  page = Page.Form
+  pdfRequest: PdfRequestDto
+
+  handleFormSubmit(pdfRequest: PdfRequestDto) {
+    this.pdfRequest = pdfRequest
+    this.page = Page.FormConfirmation
+  }
+
+  onConfirmBack() {
+    this.page = Page.Form
+  }
 }
