@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PdfRequestDto } from '../interfaces/PdfRequestDto';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-form-confirmation',
@@ -8,14 +9,13 @@ import { PdfRequestDto } from '../interfaces/PdfRequestDto';
 })
 export class FormConfirmationComponent {
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
 
   @Input() pdfRequest: PdfRequestDto
   @Output() onBack = new EventEmitter()
 
 
   onSubmit() {
-    console.log('submit')
+    this.httpService.sendPdfRequestAndDownloadFile(this.pdfRequest)
   }
-
 }
