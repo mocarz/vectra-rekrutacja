@@ -1,28 +1,40 @@
 <h1>Enter your data</h1>
 <form [formGroup]="pdfRequestForm" (ngSubmit)="onSubmit(pdfRequestForm)">
     <div>
-        Title:
-        <select id="title" formControlName="title">
-            <option>Pan</option>
-            <option>Pani</option>
-        </select>
+        <mat-form-field>
+            <mat-label>Title</mat-label>
+            <mat-select>
+                <mat-option>Pan</mat-option>
+                <mat-option>Pani</mat-option>
+            </mat-select>
+        </mat-form-field>
     </div>
     <div>
-        Name:
-        <input formControlName="name" placeholder="Name">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput placeholder="Name">
+        </mat-form-field>
     </div>
     <div>
-        Surname:
-        <input formControlName="surname" placeholder="Surname">
+        <mat-form-field class="example-full-width">
+            <mat-label>Surame</mat-label>
+            <input formControlName="surname" matInput placeholder="Surname">
+        </mat-form-field>
     </div>
     <div>
-        Identity number:
-        <input formControlName="identityNumber" placeholder="Identity number">
+        <!-- Identity number:
+        <input formControlName="identityNumber" placeholder="Identity number"> -->
+        <mat-form-field class="example-full-width">
+            <mat-label>Identity number:</mat-label>
+            <input formControlName="identityNumber" matInput placeholder="Identity number">
+        </mat-form-field>
     </div>
     <div>
-        Template name:
-        <input formControlName="templateName" placeholder="Template name">
+        <mat-form-field class="example-full-width">
+            <mat-label>Template name</mat-label>
+            <input formControlName="templateName" matInput placeholder="Template name">
+        </mat-form-field>
     </div>
 
-    <button type="submit" [disabled]="!pdfRequestForm.valid">Next</button>
+    <button mat-flat-button type="submit" [disabled]="!pdfRequestForm.valid" color="primary">Next</button>
 </form>
