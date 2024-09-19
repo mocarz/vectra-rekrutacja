@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PdfRequestDto } from './interfaces/PdfRequestDto';
+import { PdfRequestDto } from '../../interfaces/PdfRequestDto';
 
 enum Page {
   Form = "Form",
@@ -15,11 +15,11 @@ export class AppComponent {
   page = Page.Form
 
   pdfRequest: PdfRequestDto = {
-    title: '',
-    name: '',
-    surname: '',
-    identityNumber: '',
-    templateName: ''
+    title: 'Pan',
+    name: 'Michał',
+    surname: 'Mocarski',
+    identityNumber: '87040613010',
+    templateName: 'my-template'
   }
 
   handleFormSubmit() {
