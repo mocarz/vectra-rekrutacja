@@ -1,0 +1,35 @@
+<h1>Confirmation</h1>
+
+<div>
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput [value]="pdfRequest.title" disabled>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput [value]="pdfRequest.name" disabled>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>Surname</mat-label>
+        <input matInput [value]="pdfRequest.surname" disabled>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>Identity number</mat-label>
+        <input matInput [value]="pdfRequest.identityNumber" disabled>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>Template</mat-label>
+        <input matInput [value]="pdfRequest.templateName" disabled>
+    </mat-form-field>
+</div>
+
+<button (click)="onBack.emit()" type="submit" mat-flat-button>Back</button>
+<button (click)="onSubmit()" type="submit" mat-flat-button color="primary">Submit</button>

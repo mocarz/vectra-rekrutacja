@@ -8,12 +8,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { FormConfirmationComponent } from './form-confirmation/form-confirmation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PdfFormComponent
+    PdfFormComponent,
+    FormConfirmationComponent
   ],
   imports: [
     BrowserModule,

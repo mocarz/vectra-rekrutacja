@@ -1,5 +1,8 @@
 <ng-container [ngSwitch]='page'>
   <ng-container *ngSwitchCase='"Form"'>
-    <app-pdf-form (onSubmitForm)="handleFormSubmit($event)"></app-pdf-form>
+    <app-pdf-form [(inputRequest)]="pdfRequest" (onNext)="handleFormSubmit()"></app-pdf-form>
+  </ng-container>
+  <ng-container *ngSwitchCase='"FormConfirmation"'>
+    <app-form-confirmation [pdfRequest]="pdfRequest" (onBack)="onConfirmBack()"></app-form-confirmation>
   </ng-container>
 </ng-container>

@@ -13,10 +13,16 @@ enum Page {
 })
 export class AppComponent {
   page = Page.Form
-  pdfRequest: PdfRequestDto
 
-  handleFormSubmit(pdfRequest: PdfRequestDto) {
-    this.pdfRequest = pdfRequest
+  pdfRequest: PdfRequestDto = {
+    title: '',
+    name: '',
+    surname: '',
+    identityNumber: '',
+    templateName: ''
+  }
+
+  handleFormSubmit() {
     this.page = Page.FormConfirmation
   }
 
