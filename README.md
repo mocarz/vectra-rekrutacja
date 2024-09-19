@@ -9,3 +9,4 @@
 8. Implement data validation
 9. Implement simple form confirmation
 10. Implement downloading pdf
+11. Enable CORS
