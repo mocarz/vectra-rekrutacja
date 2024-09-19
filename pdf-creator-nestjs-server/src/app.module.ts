@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
+import { PdfCreatorModule } from './pdf-creator/pdf-creator.module';
 
 @Module({
-  imports: [],
+  imports: [PdfCreatorModule],
   controllers: [],
   providers: [],
 })
