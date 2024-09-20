@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { PdfRequestDto } from '../interfaces/PdfRequestDto';
-import { HttpService } from '../services/http.service';
+import { PdfRequestDto } from '../../interfaces/PdfRequestDto';
+import { HttpService } from '../../services/http.service';
 
 @Component({
   selector: 'app-form-confirmation',

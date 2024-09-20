@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { PdfRequestDto } from '../interfaces/PdfRequestDto';
-import { identityNumberValidator } from '../shared/form-validators/identity-number-validator';
-import { capitalFirstCharacter } from '../shared/form-validators/capital-first-character';
+import { PdfRequestDto } from '../../interfaces/PdfRequestDto';
+import { identityNumberValidator } from '../../shared/form-validators/identity-number-validator';
+import { capitalFirstCharacter } from '../../shared/form-validators/capital-first-character';
 
 
 @Component({

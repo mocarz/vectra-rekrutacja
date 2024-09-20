@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PdfRequestDto } from './interfaces/PdfRequestDto';
+import { PdfRequestDto } from '../../interfaces/PdfRequestDto';
 
 enum Page {
   Form = "Form",
